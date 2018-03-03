@@ -33,3 +33,6 @@ PRODUCT_DEVICE := j7maxlte
 PRODUCT_BRAND := SAMSUNG
 PRODUCT_MODEL := sm-g615f
 PRODUCT_MANUFACTURER := SAMSUNG
+
+PRODUCT_COPY_FILES += \
+    device/samsung/j7popltespr/dt.img:dt.img

@@ -30,12 +30,12 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_OTA_ASSERT_DEVICE := j7maxlte,j7maxlteins
 
 TARGET_PREBUILT_KERNEL := device/samsung/j7maxlte/kernel
-#TARGET_PREBUILT_DTB := device/samsung/j7maxlte/dtb.img
+TARGET_PREBUILT_DTB := device/samsung/j7maxlte/dt.img
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04f88000 --tags_offset 0x03f88000 --dt device/samsung/j7maxlte/dtb
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04f88000 --tags_offset 0x03f88000 #--dt $(PRODUCT_OUT)/device/samsung/j7maxlte/dtb
 
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/j7maxlte/bootimg.mk
 
@@ -52,7 +52,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS:= true
 BOARD_SUPPRESS_SECURE_ERASE := true
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+#COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # TWRP
 TW_DEVICE_VERSION := 1
