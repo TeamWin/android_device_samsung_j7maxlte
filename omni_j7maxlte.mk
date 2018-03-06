@@ -35,4 +35,4 @@ PRODUCT_MODEL := sm-g615f
 PRODUCT_MANUFACTURER := SAMSUNG
 
 PRODUCT_COPY_FILES += \
-    device/samsung/j7popltespr/dt.img:dt.img
+    device/samsung/j7maxlte/dt.img:dt.img
